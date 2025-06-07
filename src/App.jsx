@@ -4,7 +4,7 @@ import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
