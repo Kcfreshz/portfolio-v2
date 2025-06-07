@@ -1,28 +1,109 @@
-function Contact() {
-  return (
-    <div
-      id="contact"
-      className="flex min-h-[70vh] min-w-full items-center justify-center"
-    >
-      <div className="flex flex-col items-center justify-center gap-3 space-y-6 p-14">
-        <h1 className="text-center text-5xl md:text-7xl">
-          <span className="bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
-            Get in Touch
-          </span>
-        </h1>
-        <p className="text-center text-lg font-semibold text-gray-500">
-          Want to chat? Send me an E-mail through this button and I'll respond
-          whenever I can.
-        </p>
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import FormInput from "./Reusable_UI/FormInput";
+import FormTextArea from "./Reusable_UI/FormTextArea";
+import SubmitButton from "./Reusable_UI/SubmitButton";
+import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
 
-        <a
-          href="mailto:kckc176@gmail.com"
-          className="text-nowrap rounded-lg border border-indigo-600 bg-black px-5 py-3 text-lg font-bold text-white shadow-lg shadow-indigo-700 transition-all duration-300 hover:-translate-2 hover:shadow-xl hover:shadow-indigo-600 "
+function ScrollReveal({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function Contact() {
+  const [isSending, setIsSending] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // ✅ Basic client-side validation
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields.");
+      setIsSending(false); // reset the loading state
+      return; // exit the function
+    }
+
+    // ✅ Prepare the template parameters
+    // These parameters should match the fields in your EmailJS template
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    // ✅ Send the email using EmailJS
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.success("✅ Message sent successfully!");
+          // Reset form fields and states
+          setIsSending(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.error(error.text);
+          toast.error("❌ Something went wrong. Please try again.");
+          setIsSending(false);
+        }
+      );
+  };
+
+  return (
+    <ScrollReveal>
+      <Toaster position="top-right" />
+      <section id="contact" className="pl-10 md:pl-[400px]">
+        <form
+          onSubmit={handleSubmit}
+          className="containers max-w-3xls  pb-10 mx-auto flex flex-col gap-5"
         >
-          Contact Me
-        </a>
-      </div>
-    </div>
+          <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+            Contact
+          </h2>
+          <FormInput
+            label="Name"
+            type="text"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <FormInput
+            label="Email"
+            type="email"
+            placeholder="Your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <FormTextArea
+            label="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+
+          <SubmitButton isSending={isSending} />
+        </form>
+      </section>
+    </ScrollReveal>
   );
 }
 

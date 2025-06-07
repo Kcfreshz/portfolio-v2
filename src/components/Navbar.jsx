@@ -43,30 +43,57 @@ function Navbar() {
         >
           <li>Contact</li>
         </a>
+
+        <a
+          href="#resume"
+          className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+        >
+          <li>Resume</li>
+        </a>
       </ul>
 
       <ul className="hidden md:flex gap-5">
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-          <BsYoutube />
-        </li>
-
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-          <BsLinkedin />
+          <a
+            href="https://www.linkedin.com/in/kcfreshz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsLinkedin />
+          </a>
         </li>
 
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-          <BsTwitterX />
+          <a
+            href="https://x.com/Kcfresh__"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsTwitterX />
+          </a>
         </li>
 
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-          <BsGithub />
+          <a
+            href="https://github.com/Kcfreshz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsGithub />
+          </a>
         </li>
       </ul>
 
       {isOpen ? (
-        <BiX className="block md:hidden text-4xl" onClick={menuOpen} />
+        <BiX
+          className="block md:hidden text-4xl cursor-pointer"
+          onClick={menuOpen}
+        />
       ) : (
-        <IoIosMenu className="block md:hidden text-4xl" onClick={menuOpen} />
+        <IoIosMenu
+          className="block md:hidden text-4xl cursor-pointer"
+          onClick={menuOpen}
+        />
       )}
 
       {isOpen && (
@@ -95,6 +122,12 @@ function Navbar() {
               <li>Projects</li>
             </a>
             <a
+              href="#resume"
+              className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            >
+              <li>Resume</li>
+            </a>
+            <a
               href="#contact"
               className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
             >
@@ -103,20 +136,34 @@ function Navbar() {
           </ul>
 
           <ul className="flex flex-wrap gap-5">
-            <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-              <BsYoutube />
-            </li>
-
             <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-              <BsLinkedin />
+              <a
+                href="https://www.linkedin.com/in/kcfreshz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsLinkedin />
+              </a>
             </li>
 
             <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-              <BsTwitterX />
+              <a
+                href="https://x.com/Kcfresh__"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsTwitterX />
+              </a>
             </li>
 
             <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-              <BsGithub />
+              <a
+                href="https://github.com/Kcfreshz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsGithub />
+              </a>
             </li>
           </ul>
         </div>

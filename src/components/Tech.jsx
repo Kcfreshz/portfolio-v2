@@ -35,7 +35,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoTypescript className="cursor-pointer text-[800px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoTypescript className="cursor-pointer text-[80px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
 
         <motion.div
@@ -44,7 +44,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoJavascript className="cursor-pointer text-[800px] text-orange-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoJavascript className="cursor-pointer text-[80px] text-orange-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
 
         <motion.div
@@ -53,7 +53,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoDocker className="cursor-pointer text-[800px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoDocker className="cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
 
         <motion.div
@@ -62,7 +62,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoTailwindCss className="cursor-pointer text-[800px] text-sky-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoTailwindCss className="cursor-pointer text-[80px] text-sky-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
 
         <motion.div
@@ -71,7 +71,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoNodejs className="cursor-pointer text-[800px] text-green-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoNodejs className="cursor-pointer text-[80px] text-green-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
 
         <motion.div
@@ -80,7 +80,7 @@ function Tech() {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoPostgresql className="cursor-pointer text-[800px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoPostgresql className="cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
       </div>
     </div>

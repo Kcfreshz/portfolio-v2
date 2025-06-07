@@ -1,48 +1,48 @@
-import image1 from "/1.png";
-import image2 from "/2.png";
-import image3 from "/3.png";
-import image4 from "/4.png";
-import image5 from "/5.png";
+import image1 from "/1a.jpg";
+import image2 from "/2a.jpg";
+import image3 from "/3a.jpg";
+import image4 from "/4a.jpg";
+import image5 from "/5a.2.jpg";
 import { motion } from "framer-motion";
 
 const projectsData = [
   {
     image: image1,
-    title: "Habit Tracker",
+    title: "Workflow Organisation Tool",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos quae dolorem necessitatibus a asperiores doloremque rerum laboriosam nisi at dolore dolores hic, cum quibusdam aliquid laborum est repudiandae eaque? ",
+      "This app allows users to create, manage, and track various tasks, projects, or wireframes in a structured interface. It features a clean layout with sections for folders, task statuses, and development stages, making it ideal for teams working on creative or technical projects.",
     technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
   },
 
   {
     image: image2,
-    title: "Todo App",
+    title: "Cloud-Based Storage and Management System",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos quae dolorem necessitatibus a asperiores doloremque rerum laboriosam nisi at dolore dolores hic, cum quibusdam aliquid laborum est repudiandae eaque? ",
+      "A modern cloud storage app that combines a playful, cartoon-style interface with powerful file management capabilities. Designed for seamless storage, organization, and sharing of documents, videos, and more, it offers intuitive storage tracking and compression tools. Perfect for users seeking a visually engaging and efficient way to manage their digital assets.",
     technologies: ["TypeScript", "Next.js", "Tailwind", "PostgreSQL"],
   },
 
   {
     image: image3,
-    title: "Social Media App",
+    title: "Futuristic Project Management App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos quae dolorem necessitatibus a asperiores doloremque rerum laboriosam nisi at dolore dolores hic, cum quibusdam aliquid laborum est repudiandae eaque? ",
+      "A cutting-edge project management app with a futuristic twist, designed for creative and technical teams. Featuring a stunning sci-fi interface, it allows users to craft, organize, and monitor wireframes, tasks, and development stages with ease. Ideal for innovators seeking a dynamic and visually immersive tool to elevate their workflow and collaboration experience.",
     technologies: ["TypeScript", "React", "Tailwind", "Supabase"],
   },
 
   {
     image: image4,
-    title: "Restaurant Website",
+    title: "Restaurant E-commerce Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos quae dolorem necessitatibus a asperiores doloremque rerum laboriosam nisi at dolore dolores hic, cum quibusdam aliquid laborum est repudiandae eaque? ",
+      "A stylish e-commerce app tailored for fashion enthusiasts, offering a seamless shopping experience for clothing and lifestyle products. With an intuitive interface, it provides easy navigation through various categories, secure account management, and dedicated customer support. Perfect for users looking to explore and purchase trendy apparel with convenience and ease. ",
     technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
   },
 
   {
     image: image5,
-    title: "Admin Dashboard",
+    title: "SpaceVoyager: Spacecraft Simulation App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos quae dolorem necessitatibus a asperiores doloremque rerum laboriosam nisi at dolore dolores hic, cum quibusdam aliquid laborum est repudiandae eaque? ",
+      "SpaceVoyager is an innovative app that brings the wonders of space exploration to life with stunning spacecraft simulations. Set against breathtaking planetary landscapes, it allows users to design, navigate, and explore futuristic spacecraft, offering an immersive experience for space enthusiasts and gamers alike. Perfect for those passionate about the cosmos and cutting-edge technology. ",
     technologies: ["React", "Tailwind", "Docker", "MySQL"],
   },
 ];
