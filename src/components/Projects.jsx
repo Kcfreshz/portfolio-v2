@@ -1,49 +1,42 @@
-import image1 from "/1a.jpg";
-import image2 from "/2a.jpg";
-import image3 from "/3a.jpg";
-import image4 from "/4a.jpg";
-import image5 from "/5a.2.jpg";
+import image1 from "/img-editor.jpg";
+import image2 from "/utm.png";
+import image3 from "/ibank-img.jpg";
+import { IoIosLink } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const projectsData = [
   {
     image: image1,
-    title: "Workflow Organisation Tool",
-    description:
-      "This app allows users to create, manage, and track various tasks, projects, or wireframes in a structured interface. It features a clean layout with sections for folders, task statuses, and development stages, making it ideal for teams working on creative or technical projects.",
-    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
+    title: "EditSnap - Smart Image Editing in Your Browser",
+    description: `EditSnap is a sleek, browser-based image editor that allows users to resize, rotate, flip, and apply various filters (brightness, contrast, saturation, grayscale, sepia, blur) to their images in real-time. It also supports format conversion (JPG, PNG, WebP) with customizable quality levels, offering a fast and intuitive experience without any need for downloads or paid tools.
+      
+      This project deepened my understanding of the HTML5 Canvas API, image manipulation techniques, and how to create clean, user-friendly interfaces with Tailwind CSS and JavaScript.`,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "Canvas API",
+      "DOM API",
+    ],
+    liveLink: "https://editsnap.netlify.app/",
   },
 
   {
     image: image2,
-    title: "Cloud-Based Storage and Management System",
+    title: "UTM Link Generator",
     description:
-      "A modern cloud storage app that combines a playful, cartoon-style interface with powerful file management capabilities. Designed for seamless storage, organization, and sharing of documents, videos, and more, it offers intuitive storage tracking and compression tools. Perfect for users seeking a visually engaging and efficient way to manage their digital assets.",
-    technologies: ["TypeScript", "Next.js", "Tailwind", "PostgreSQL"],
+      "A simple, intuitive tool that helps businesses, marketers, and content creators generate UTM-tagged URLs to track traffic sources across platforms. With this tool, users can create trackable links to understand where their visitors are coming from, which campaigns are performing best, and which channels need improvement — all without relying on complex analytics tools.",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+    liveLink: "https://utmgenerate.netlify.app/",
   },
 
   {
     image: image3,
-    title: "Futuristic Project Management App",
+    title: "iBanking - Modern Digital Banking Interface",
     description:
-      "A cutting-edge project management app with a futuristic twist, designed for creative and technical teams. Featuring a stunning sci-fi interface, it allows users to craft, organize, and monitor wireframes, tasks, and development stages with ease. Ideal for innovators seeking a dynamic and visually immersive tool to elevate their workflow and collaboration experience.",
-    technologies: ["TypeScript", "React", "Tailwind", "Supabase"],
-  },
-
-  {
-    image: image4,
-    title: "Restaurant E-commerce Website",
-    description:
-      "A stylish e-commerce app tailored for fashion enthusiasts, offering a seamless shopping experience for clothing and lifestyle products. With an intuitive interface, it provides easy navigation through various categories, secure account management, and dedicated customer support. Perfect for users looking to explore and purchase trendy apparel with convenience and ease. ",
-    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
-  },
-
-  {
-    image: image5,
-    title: "SpaceVoyager: Spacecraft Simulation App",
-    description:
-      "SpaceVoyager is an innovative app that brings the wonders of space exploration to life with stunning spacecraft simulations. Set against breathtaking planetary landscapes, it allows users to design, navigate, and explore futuristic spacecraft, offering an immersive experience for space enthusiasts and gamers alike. Perfect for those passionate about the cosmos and cutting-edge technology. ",
-    technologies: ["React", "Tailwind", "Docker", "MySQL"],
+      "iBanking is a sleek, responsive banking dashboard interface designed to simulate real-world online banking systems. Built as a frontend project, it features account overviews, transaction history, quick transfers, and intuitive UI components. This project highlights my skills in modern web design, responsive layouts, and user-centric interface development, reflecting industry-standard banking app aesthetics.",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+    liveLink: "https://ibankings.netlify.app/",
   },
 ];
 
@@ -82,6 +75,17 @@ function ProjectCard({ project }) {
               </span>
             ))}
           </div>
+
+          {project.liveLink && (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 w-fit rounded-md bg-blue-700 px-4 py-2 text-white hover:bg-blue-600 transition"
+            >
+              <IoIosLink /> Live Preview
+            </a>
+          )}
         </div>
       </div>
     </ScrollReveal>
